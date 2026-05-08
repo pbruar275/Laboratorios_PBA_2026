@@ -49,8 +49,8 @@ class Program
         Persona persona1 = new Persona();
 
         persona1.nombre = "Pedro";
-        persona1.edad = 20;
-        persona1.altura = 1.75;
+        persona1.edad = 23;
+        persona1.altura = 1.82;
         persona1.estudiante = true;
 
         Console.WriteLine("Nombre: " + persona1.nombre);
@@ -63,9 +63,9 @@ class Program
 
         Vehiculo vehiculo1 = new Vehiculo();
 
-        vehiculo1.marca = "Toyota";
-        vehiculo1.modelo = "Corolla";
-        vehiculo1.anio = 2022;
+        vehiculo1.marca = "Mitsubishi";
+        vehiculo1.modelo = "Outlander";
+        vehiculo1.anio = 2026;
         vehiculo1.color = "Negro";
         vehiculo1.placa = "P123ABC";
 
@@ -82,13 +82,13 @@ class Program
         Producto producto2 = new Producto();
 
         producto1.codigo = "P001";
-        producto1.nombre = "Laptop";
-        producto1.precio = 5500.50;
+        producto1.nombre = "TV";
+        producto1.precio = 15500.50;
         producto1.stock = 10;
         producto1.disponible = true;
 
         producto2.codigo = "P002";
-        producto2.nombre = "Mouse";
+        producto2.nombre = "Control Universal";
         producto2.precio = 150.75;
         producto2.stock = 25;
         producto2.disponible = true;
@@ -114,9 +114,9 @@ class Program
 
         Mascota mascota1 = new Mascota();
 
-        mascota1.nombre = "Max";
+        mascota1.nombre = "Willy";
         mascota1.especie = "Perro";
-        mascota1.edad = 4;
+        mascota1.edad = 6;
         mascota1.peso = 12.5;
         mascota1.vacunado = true;
 
