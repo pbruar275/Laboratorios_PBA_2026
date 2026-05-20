@@ -1,5 +1,8 @@
+// PROYECTO 2 - GESTIÓN DE GRANJA
 using System;
-
+// ==========================================
+// CLASE PARCELA
+// ==========================================
 class Parcela
 {
     public string tipoCultivo;
@@ -20,15 +23,23 @@ class Parcela
 
 class Program
 {
+// ==========================================
+// MÉTODO PRINCIPAL
+// ==========================================
     static void Main()
     {
+// ==========================================
+// VARIABLES PRINCIPALES
+// ==========================================
         double dinero;
         int empleados;
         double sueldoEmpleado;
         int meses;
         int filas;
         int columnas;
-
+// ==========================================
+// CONTADORES Y REPORTES
+// ==========================================
         double totalIngresos = 0;
         double totalEgresos = 0;
         int totalRiegos = 0;
@@ -36,7 +47,9 @@ class Program
         int cosechasPapa = 0;
         int cosechasTomate = 0;
         int cosechasFresa = 0;
-
+// ==========================================
+// INGRESO DE DATOS INICIALES
+// ==========================================
         Console.WriteLine("===== GESTIÓN DE GRANJA =====\n");
 
         dinero = LeerDouble("Ingrese dinero inicial: ");
@@ -45,7 +58,9 @@ class Program
         meses = LeerEntero("Ingrese meses a simular: ");
         filas = LeerEntero("Ingrese cantidad de filas: ");
         columnas = LeerEntero("Ingrese cantidad de columnas: ");
-
+// ==========================================
+// CREACIÓN DE MATRIZ DE PARCELAS
+// ==========================================
         Parcela[,] parcelas = new Parcela[filas, columnas];
 
         for (int i = 0; i < filas; i++)
@@ -57,7 +72,9 @@ class Program
         }
 
         int opcion = 0;
-
+// ==========================================
+// MENÚ PRINCIPAL
+// ==========================================
         while (opcion != 5 && meses > 0 && dinero > 0)
         {
             Console.WriteLine("\n===== MENÚ =====");
@@ -71,6 +88,9 @@ class Program
 
             switch (opcion)
             {
+// ==========================================
+// SEMBRAR CULTIVOS
+// ==========================================
                 case 1:
 
                     int filaSembrar = LeerEntero("Fila: ");
@@ -125,7 +145,9 @@ class Program
                     }
 
                     break;
-
+// ==========================================
+// REGAR PARCELAS
+// ==========================================
                 case 2:
 
                     int filaRegar = LeerEntero("Fila: ");
@@ -169,7 +191,9 @@ class Program
                     }
 
                     break;
-
+// ==========================================
+// CONSULTAR PARCELA
+// ==========================================
                 case 3:
 
                     int filaConsulta = LeerEntero("Fila: ");
@@ -204,7 +228,9 @@ class Program
                     }
 
                     break;
-
+// ==========================================
+// AVANZAR DE MES
+// ==========================================
                 case 4:
 
                     meses--;
@@ -274,7 +300,9 @@ class Program
                     Console.WriteLine("Dinero actual: Q" + dinero);
 
                     break;
-
+// ==========================================
+// SALIR DEL PROGRAMA
+// ==========================================
                 case 5:
 
                     Console.WriteLine("Saliendo del programa...");
@@ -285,7 +313,9 @@ class Program
                     break;
             }
         }
-
+// ==========================================
+// REPORTE FINAL
+// ==========================================
         Console.WriteLine("\n===== REPORTE FINAL =====");
 
         Console.WriteLine("Dinero final: Q" + dinero);
@@ -334,7 +364,9 @@ class Program
 
         Console.WriteLine("\nFin de la simulación.");
     }
-
+// ==========================================
+// VALIDAR POSICIÓN
+// ==========================================
     static bool PosicionValida(int fila, int columna, int filas, int columnas)
     {
         if (fila >= 0 && fila < filas && columna >= 0 && columna < columnas)
@@ -346,7 +378,9 @@ class Program
             return false;
         }
     }
-
+// ==========================================
+// VALIDAR NÚMEROS ENTEROS
+// ==========================================
     static int LeerEntero(string mensaje)
     {
         int valor;
@@ -376,7 +410,9 @@ class Program
 
         return valor;
     }
-
+// ==========================================
+// VALIDAR NÚMEROS DECIMALES
+// ==========================================
     static double LeerDouble(string mensaje)
     {
         double valor;
